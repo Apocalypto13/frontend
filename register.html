@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register - Waste Monitoring</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    body {
+      background-color: #003366;
+      font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    }
+    .container-box {
+      background-color: white;
+      border-radius: 15px;
+      display: flex;
+      overflow: hidden;
+      max-width: 900px;
+      margin: 5% auto;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    .left-panel {
+      flex: 1;
+      background-color: #4da6ff;
+      padding: 40px;
+      color: #000;
+    }
+    .right-panel {
+      flex: 1;
+      background-color: #fdfdfd;
+      padding: 40px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .form-control {
+      background-color: #e6e6e6;
+      border: none;
+    }
+    .form-control:focus {
+      box-shadow: none;
+      border: 1px solid #aaa;
+    }
+    .btn-cancel {
+      background-color: #ffe083;
+      border: none;
+      color: #000;
+    }
+    .btn-create {
+      background-color: #c2ddff;
+      border: none;
+      color: #000;
+    }
+    .left-panel h5 {
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-box">
+    <div class="left-panel">
+      <h5 class="fw-bold mb-4 text-center">Register</h5>
+      <form id="registerForm">
+        <div class="mb-3">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input type="text" id="fullName" class="form-control" placeholder="Input Full Name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-control" placeholder="Input Email" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" class="form-control" placeholder="Input Password" required>
+        </div>
+        <div class="mb-4">
+          <label for="confirmPassword" class="form-label">Re-Enter Password</label>
+          <input type="password" id="confirmPassword" class="form-control" placeholder="Input Password Again" required>
+        </div>
+        <div class="d-flex justify-content-between">
+          <button type="button" class="btn btn-cancel px-4 py-2" id="cancelButton">CANCEL</button>
+          <button type="submit" class="btn btn-create px-4 py-2">CREATE ACCOUNT</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="right-panel">
+      <h5 class="mb-3">Welcome to Our Webpage!</h5>
+      <p>This is a Webpage for monitoring the waste throwed in<br><strong>Leyte Normal University</strong></p>
+      <img src="images\logo.png" alt="Waste Management Illustration" style="max-width: 300px; margin-top: 20px; margin-left:auto; margin-right: auto;">
+    </div>
+  </div>
+
+  <script>
+
+    document.getElementById('cancelButton').addEventListener('click', function () {
+      window.location.href = 'login.html'; 
+    });
+
+    document.getElementById('registerForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      alert('Account created!');
+      window.location.href = 'welcome.html'; 
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
